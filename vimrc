@@ -21,8 +21,8 @@ set nocompatible
 " Pathogen - easy vim scripts managment (GK)
 " should be placed before 'filetype plugin indent on' command
 " *************************************
-" call pathogen#infect()
-call pathogen#runtime_append_all_bundles() " from vimcasts.org
+ call pathogen#infect()
+""call pathogen#runtime_append_all_bundles() " from vimcasts.org
 call pathogen#helptags()
 
 " allow backspacing over everything in insert mode

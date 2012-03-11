@@ -26,7 +26,7 @@ if has("gui_running")
         set gfn=Consolas:h11:cANSI
     endif
 
-"    colorscheme mayansmoke
+    colorscheme mayansmoke
     set guioptions-=T   " hide tools panel
     set guioptions-=m   " hide menu
     set lines=50

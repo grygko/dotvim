@@ -21,8 +21,9 @@ set nocompatible
 " Pathogen - easy vim scripts managment (GK)
 " should be placed before 'filetype plugin indent on' command
 " *************************************
-""call pathogen#infect()
-""call pathogen#helptags()
+" call pathogen#infect()
+call pathogen#runtime_append_all_bundles() " from vimcasts.org
+call pathogen#helptags()
 
 " allow backspacing over everything in insert mode
 ""set backspace=indent,eol,start
@@ -71,27 +72,27 @@ if has("autocmd")
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
-""  filetype plugin indent on
+  filetype plugin indent on
 
   " Put these in an autocmd group, so that we can delete them easily.
-""  augroup vimrcEx
-""  au!
+  augroup vimrcEx
+  au!
 
   " For all text files set 'textwidth' to 80 characters.
-""  autocmd FileType text setlocal textwidth=80
-""  autocmd FileType tex setlocal ts=4 sts=2 sw=2 expandtab  " TODO: tex.vim???
+  autocmd FileType text setlocal textwidth=80
+  autocmd FileType tex setlocal ts=4 sts=2 sw=2 expandtab  " TODO: tex.vim???
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
   " Also don't do it when the mark is in the first line, that is the default
   " position when opening a file.
-""  autocmd BufReadPost *
-""    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-""    \   exe "normal! g`\"" |
-""    \ endif
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
 
-""  augroup END
+  augroup END
 
 else
 
